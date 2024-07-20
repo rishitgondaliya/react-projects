@@ -3,7 +3,7 @@ import { InputBox } from "../components";
 import useCurrencyInfo from "../hooks/useCurrencyInfo";
 
 function App() {
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("USD");
   const [to, setTo] = useState("INR");
   const [convertedAmount, setConvertedAmount] = useState(0);
@@ -69,7 +69,7 @@ function App() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
+              className="w-full bg-blue-600 text-white text-lg px-4 py-2 rounded-lg"
             >
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
