@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 
-function useCurrencyInfo(baseCurrency) {
+export default function useCurrencyInfo(baseCurrency) {
   const [info, setInfo] = useState({});
 
   useEffect(() => {
@@ -23,5 +23,3 @@ function useCurrencyInfo(baseCurrency) {
 
   return info;
 }
-
-export default useCurrencyInfo;
