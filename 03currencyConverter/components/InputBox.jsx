@@ -30,9 +30,12 @@ export default function InputBox({
           placeholder="Enter amount"
           disabled={amountDisabled}
           value={amount}
-          onChange={(e) =>
-            onAmountChange && onAmountChange(Number(e.target.value))
-          }
+          onChange={(e) => {
+            const value = Number(e.target.value);
+            if (value >= 0) {
+              onAmountChange && onAmountChange(value);
+            }
+          }}
         />
       </div>
       <div className="mb-4">
