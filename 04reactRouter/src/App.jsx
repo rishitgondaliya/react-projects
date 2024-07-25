@@ -24,7 +24,7 @@ function App() {
   ])
   return (
     <>
-      {/* <h1 className="bg-gray-500 text-4xl text-center p-4 m-4">React Router</h1> */}
+      {/* <h1 className="bg-gray-500 text-4xl text-center p-4 m-4 ">React Router</h1> */}
       <RouterProvider router={router}/>
     </>
   )
