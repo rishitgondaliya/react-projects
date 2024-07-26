@@ -3,6 +3,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from '../components/Layout/Layout'
 import About from '../components/About/About'
 import Home from '../components/Home/Home'
+import Contact from '../components/Contact/Contact'
+import Github from '../components/Github/Github'
 
 function App() {
   
@@ -18,6 +20,14 @@ function App() {
         {
           path: 'about',
           element: <About />
+        },
+        {
+          path: 'contact',
+          element: <Contact />
+        }, 
+        {
+          path: 'github',
+          element: <Github />
         }
       ]
     }
