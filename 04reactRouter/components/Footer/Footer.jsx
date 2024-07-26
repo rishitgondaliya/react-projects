@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-white border-y">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full max-w-screen-xl p-4 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <Link to="/" className="flex items-center">
@@ -25,28 +25,42 @@ export default function Footer() {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-lg font-semibold text-gray-700 uppercase">
+                <h2 className="mb-4 text-lg font-semibold text-gray-700 uppercase">
                   Resources
                 </h2>
                 <ul className="text-gray-500 text-lg font-medium">
-                  <li className="mb-4">
-                    <Link to="/" className="hover:underline">
+                  <li className="mb-2">
+                    <Link
+                      to="/home"
+                      className={({ isActive }) =>
+                        `hover:underline ${
+                          isActive ? "text-orange-600" : "text-gray-600"
+                        }`
+                      }
+                    >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about" className="hover:underline">
+                    <Link
+                      to="/about"
+                      className={({ isActive }) =>
+                        `hover:underline ${
+                          isActive ? "text-orange-600" : "text-gray-600"
+                        }`
+                      }
+                    >
                       About
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-lg font-semibold text-gray-700 uppercase">
+                <h2 className="mb-4 text-lg font-semibold text-gray-700 uppercase">
                   Follow us
                 </h2>
                 <ul className="text-gray-500 text-lg font-medium">
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/rishitgondaliya"
                       className="hover:underline"
@@ -56,12 +70,12 @@ export default function Footer() {
                       Github
                     </a>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <Link to="/" className="hover:underline">
                       Discord
                     </Link>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <Link to="/" className="hover:underline">
                       Youtube
                     </Link>
@@ -69,11 +83,11 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-lg font-semibold text-gray-700 uppercase">
+                <h2 className="mb-4 text-lg font-semibold text-gray-700 uppercase">
                   Legal
                 </h2>
                 <ul className="text-gray-500 text-lg font-medium">
-                  <li className="mb-4">
+                  <li className="mb-2">
                     <Link to="#" className="hover:underline">
                       Privacy Policy
                     </Link>
