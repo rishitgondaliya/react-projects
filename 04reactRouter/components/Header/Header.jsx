@@ -35,7 +35,7 @@ export default function Header() {
                 <NavLink
                 to="/home"
                   className={({isActive}) =>
-                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                   }
                 >
                   Home
@@ -45,7 +45,7 @@ export default function Header() {
                 <NavLink
                 to="/about"
                   className={({isActive}) =>
-                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                   }
                 >
                   About
@@ -55,7 +55,7 @@ export default function Header() {
                 <NavLink
                 to="/contact"
                   className={({isActive}) =>
-                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                   }
                 >
                   Contact
@@ -65,7 +65,7 @@ export default function Header() {
                 <NavLink
                 to="/github"
                   className={({isActive}) =>
-                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                    `block py-2 pr-4 pl-3 duration-200 border-b ${isActive ? "text-orange-600" : "text-gray-600"} border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                   }
                 >
                   Github
