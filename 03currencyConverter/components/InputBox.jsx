@@ -1,64 +1,54 @@
 /* eslint-disable react/prop-types */
-import { useId } from "react";
+import React, { useId } from 'react'
 
-export default function InputBox({
-  label = "Amount",
+function InputBox({
+  label,
   amount,
   onAmountChange,
   onCurrencyChange,
   currencyOptions = [],
   selectCurrency = "usd",
-  amountDisabled = false,
-  currencyDisabled = false,
+  amountDisable = false,
+  currencyDisable = false,
+  className = "",
 }) {
-  const amountInputId = useId();
-  const currencySelectId = useId();
+  const amountInputId = useId()
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg shadow-lg max-w-md mx-auto mt-10">
-      <div className="mb-4">
-        <label
-          htmlFor={amountInputId}
-          className="block text-gray-700 font-semibold mb-2"
-        >
+    <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
+      <div className="w-1/2">
+        <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
           {label}
         </label>
         <input
-          type="number"
           id={amountInputId}
-          className="outline-none w-full py-2 px-4 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"
-          placeholder="Enter amount"
-          disabled={amountDisabled}
+          className="outline-none w-full bg-transparent py-1.5"
+          type="number"
+          placeholder="Amount"
+          disabled={amountDisable}
           value={amount}
-          onChange={(e) => {
-            const value = Number(e.target.value);
-            if (value >= 0) {
-              onAmountChange && onAmountChange(value);
-            }
-          }}
+          onChange={(e) => onAmountChange && onAmountChange(Number(e.target.value))}
         />
       </div>
-      <div className="mb-4">
-        <label
-          htmlFor={currencySelectId}
-          className="block text-gray-700 font-semibold mb-2"
-        >
-          Currency Type
-        </label>
+      <div className="w-1/2 flex flex-wrap justify-end text-right">
+        <p className="text-black/40 mb-2 w-full">Currency Type</p>
         <select
-          id={currencySelectId}
-          className="w-full py-2 px-4 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 cursor-pointer bg-white"
+          className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
           value={selectCurrency}
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
-          disabled={currencyDisabled}
+          disabled={currencyDisable}
         >
+
           {currencyOptions.map((currency) => (
             <option key={currency} value={currency}>
               {currency}
             </option>
           ))}
+
         </select>
       </div>
     </div>
   );
 }
+
+export default InputBox;
