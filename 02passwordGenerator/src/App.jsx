@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
-  const [length, setLength] = useState(8);
+  const [length, setLength] = useState(12);
   const [numAllowed, setNumAllowed] = useState(false);
-  const [charAllowed, setCharAllowed] = useState(false);
+  const [charAllowed, setCharAllowed] = useState(true);
   const [password, setPassword] = useState("");
 
   const passwordRef = useRef(null);
