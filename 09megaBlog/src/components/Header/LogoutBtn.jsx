@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { useDispatch } from "react-redux"
-import authService from '../appwrite/auth'
-import logout from '../store/authSlice'
+import authService from '../../appwrite/auth'
+import logout from '../../store/authSlice'
 
 export default function LogoutBtn() {
     const dispatch = useDispatch()
