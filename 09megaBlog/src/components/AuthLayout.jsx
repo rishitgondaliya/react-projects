@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React, {useState, useEffect} from 'react'
-import {useSelector} from 'react-redux'
+import React, { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 export default function Protected({ children,
@@ -12,9 +12,9 @@ export default function Protected({ children,
     const authStatus = useSelector(state => state.auth.status)
 
     useEffect(() => {
-        if(authentication && authStatus !== authentication) {
+        if (authentication && authStatus !== authentication) {
             navigate("/login")
-        } else if(!authentication && authStatus !== authentication) {
+        } else if (!authentication && authStatus !== authentication) {
             navigate("/")
         }
         setLoader(false)
