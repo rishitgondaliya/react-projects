@@ -22,7 +22,7 @@ export class AuthService {
             return userAccount;
         }
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite service :: create account :: error", error);
     }
   }
 
