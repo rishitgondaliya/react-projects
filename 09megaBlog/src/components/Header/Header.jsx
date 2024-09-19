@@ -10,40 +10,43 @@ function Header() {
 
   const navItems = [
     {
-      name: 'Home',
+      name: 'HOME',
       slug: "/",
       active: true
     },
     {
-      name: "Login",
+      name: "LOGIN",
       slug: "/login",
       active: !authStatus,
     },
     {
-      name: "Signup",
+      name: "SIGN UP",
       slug: "/signup",
       active: !authStatus,
     },
     {
-      name: "All Posts",
-      slug: "/all-posts",
+      name: "ALL BLOGS",
+      slug: "/all-blogs",
       active: authStatus,
     },
     {
-      name: "Add Post",
-      slug: "/add-post",
+      name: "CREATE YOUR BLOG",
+      slug: "/create-blog",
       active: authStatus,
     },
   ]
 
 
   return (
-    <header className="py-3 shadow bg-gray-400">
+    <header className="py-3 shadow sticky z-50 top-0 w-full bg-[#FCCDCD]">
       <Container>
         <nav className='flex'>
           <div className="mr-4">
             <Link to='/'>
-              <Logo width='70px' />
+              <div className="flex">
+              <Logo width='40px' />
+              <h2 className="text-xl ml-4 my-auto text-center font-mono">Blogify</h2>
+              </div>
             </Link>
           </div>
           <ul className="ml-auto flex">
@@ -51,7 +54,7 @@ function Header() {
               item.active ? (
                 <li key={item.name}>
                   <button
-                    className='inline-block px-6 py-2 duration-200 hover:bg-blue-200 rounded-full'
+                    className='inline-block text-base px-6 py-2 duration-200 hover:bg-[#F85046] rounded-full'
                     onClick={() => navigate(item.slug)}>
                     {item.name}
                   </button>
