@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { AuthLayout, Login } from './components/index.js'
-import { AddPost, AllPosts, EditPost, Home, Post, Signup } from './pages/index.js'
+import { AddPost, AllPosts, EditPost, Home, Post, Signup, Profile } from './pages/index.js'
 import store from './store/store.js'
 import App from './App.jsx'
 import './index.css'
@@ -58,6 +58,15 @@ const router = createBrowserRouter([
             <EditPost />
           </AuthLayout>
         ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <AuthLayout authentication>
+            {" "}
+            <Profile />
+          </AuthLayout>
+        )
       },
       {
         path: "/post/:slug",
