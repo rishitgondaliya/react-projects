@@ -1,14 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import { Container, Logo, LogoutBtn } from '../index'
-import { Link, useNavigate } from 'react-router-dom'
+import { Container, Logo } from '../index'
+import { Link, NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import {Profile} from '../../pages/index'
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status)
-  const [activeSlug, setActiveSlug] = useState('/home')
-  const navigate = useNavigate()
 
   const navItems = [
     {
@@ -43,17 +39,6 @@ function Header() {
     }
   ]
 
-  useEffect(() => {
-    const savedSlug = localStorage.getItem('activeSlug')
-    if (savedSlug) setActiveSlug(savedSlug)
-  }, [])
-
-  const handleClick = (slug) => {
-    setActiveSlug(slug)
-    localStorage.setItem('activeSlug', slug)
-    navigate(slug)
-  }
-
   return (
     <header className="flex items-center shadow sticky z-50 top-0 w-full h-20 bg-[#FCCDCD]">
       <Container>
@@ -70,13 +55,15 @@ function Header() {
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
-                  <button
-                    key={item.slug}
-                    className={`inline-block text-base px-6 py-2 duration-200 hover:bg-[#f9928d] focus:outline-none rounded-full
-            ${activeSlug === item.slug ? 'underline underline-offset-4' : ''}`}
-                    onClick={() => handleClick(item.slug)}>
+                  <NavLink
+                    to={item.slug}
+                    className={({ isActive }) =>
+                      `inline-block text-base px-6 py-2 duration-200 hover:bg-[#f9928d] focus:outline-none rounded-full
+                      ${isActive ? 'underline underline-offset-4' : ''}`
+                    }
+                  >
                     {item.name}
-                  </button>
+                  </NavLink>
                 </li>
               ) : null
             )}
