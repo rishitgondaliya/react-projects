@@ -19,7 +19,7 @@ function Signup() {
             if (userData) {
                 const userData = await authService.getCurrentUser()
                 if (userData) dispatch(login(userData))
-                navigate("/")
+                navigate("/home")
             }
         } catch (error) {
             setError(error.message)
