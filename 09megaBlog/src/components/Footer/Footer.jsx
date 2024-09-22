@@ -3,7 +3,7 @@ import { Logo } from "../index"
 
 export default function Footer() {
     return (
-        <section className="relative overflow-hidden py-10 bg-[#191A21] border border-t-2 border-t-black">
+        <section className="relative overflow-hidden py-10 bg-[#191A21]">
             <div className="relative z-10 mx-auto max-w-7xl px-4">
                 <div className="-m-6 flex flex-wrap">
                     <div className="w-full p-6 md:w-1/2 lg:w-5/12">
@@ -16,7 +16,7 @@ export default function Footer() {
                             </div>
                             <div>
                                 <p className="text-sm text-white">
-                                    &copy; Copyright 2023. All Rights Reserved by DevUI.
+                                    &copy; Copyright 2024. All Rights Reserved by Blogify.
                                 </p>
                             </div>
                         </div>
