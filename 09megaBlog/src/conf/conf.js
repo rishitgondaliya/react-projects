@@ -5,6 +5,7 @@ const conf = {
   appwriteCollectionId: String(import.meta.env.VITE_APPWRITE_COLLECTION_ID),
   appwriteBucketId: String(import.meta.env.VITE_APPWRITE_BUCKET_ID),
   tinymceApiKey: String(import.meta.env.VITE_TINYMCE_API_KEY),
+  profilePictureBucketId: String(import.meta.env.VITE_PROFILE_PICTURE_BUCKET_ID)
 };
 
 export default conf;
