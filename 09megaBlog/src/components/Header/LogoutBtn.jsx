@@ -1,15 +1,18 @@
-import { useDispatch } from "react-redux"
-import authService from '../../appwrite/auth'
-import { logout } from '../../store/authSlice'
+/* eslint-disable react/prop-types */
+import { useDispatch } from "react-redux";
+import authService from '../../appwrite/auth';
+import { logout } from '../../store/authSlice';
 
-export default function LogoutBtn() {
-    const dispatch = useDispatch()
+export default function LogoutBtn({ onLogout }) {
+    const dispatch = useDispatch();
     const logoutHandler = () => {
         authService.logout()
             .then(() => {
-                dispatch(logout())
-            })
-    }
+                dispatch(logout());
+                if (onLogout) onLogout(); // Call the onLogout prop
+            });
+    };
+
     return (
         <button
             className="inline-block text-base px-6 py-2 duration-200 bg-red-500 hover:bg-[#f9928d] rounded"
@@ -17,5 +20,5 @@ export default function LogoutBtn() {
         >
             LOGOUT
         </button>
-    )
+    );
 }
