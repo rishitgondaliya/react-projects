@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { Container, PostForm } from '../components'
-import appwriteService from '../appwrite/config'
 import { useNavigate, useParams } from 'react-router-dom'
+import appwriteService from '../appwrite/config'
 
 function EditPost() {
   const [post, setPosts] = useState(null)
