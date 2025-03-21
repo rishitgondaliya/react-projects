@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux'; // Import useSelector to get user state
 import { Container, PostCard } from '../components';
 import appwriteService from '../appwrite/config';

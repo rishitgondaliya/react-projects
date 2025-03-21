@@ -8,7 +8,7 @@ function AllPosts() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    appwriteService.getPosts([]) 
+    appwriteService.getPosts([])
       .then((response) => {
         if (response) {
           setPosts(response.documents);
@@ -18,20 +18,20 @@ function AllPosts() {
       .catch(() => {
         setLoading(false);
       });
-  }, []); 
+  }, []);
 
   if (loading) {
     return <div className="w-full py-8 mt-4 text-center">
-    <Container>
+      <Container>
         <div className="flex flex-wrap">
-            <div className="p-2 w-full">
-                <h1 className="text-2xl font-bold hover:text-gray-500">
-                    Loading blogs for you...
-                </h1>
-            </div>
+          <div className="p-2 w-full">
+            <h1 className="text-2xl font-bold hover:text-gray-500">
+              Loading blogs for you...
+            </h1>
+          </div>
         </div>
-    </Container>
-</div>
+      </Container>
+    </div>
   }
 
   if (!posts.length) {

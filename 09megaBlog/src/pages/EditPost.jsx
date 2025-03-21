@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Container, PostForm } from '../components'
 import { useNavigate, useParams } from 'react-router-dom'
 import appwriteService from '../appwrite/config'

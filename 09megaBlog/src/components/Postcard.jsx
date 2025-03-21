@@ -10,7 +10,7 @@ function Postcard({ $id, title, featuredImage }) {
         <Link to={`/post/${$id}`}>
             <div className="bg-[#f1f0d8] w-full rounded-xl p-4">
                 <div className="w-full justify-center mb-4">
-                    <img src={imageUrl} alt={title} className="rounnded-xl"/>
+                    <img src={imageUrl} alt={title} className="rounded-xl"/>
                 </div>
                 <h2 className="text-xl font-bold">{title}</h2>
             </div>
